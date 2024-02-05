@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout</title>
+    <style>
+      .main {
+        margin: auto;
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .card {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .card > img {
+        width: 100%;
+        height: 60%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .navbar {
+        width: 100%;
+        display: flex;
+        text-align: center;
+
+        justify-content: space-between;
+
+        padding: 10px 20px;
+        margin: 0px;
+        list-style-type: none;
+
+        display: inline-block;
+        background-color: blue;
+      }
+      /* * {
+        margin: 50px;
+        padding: 50px;
+        box-sizing: border-box; /* Added box-sizing for better layout handling */
+      */ body {
+        font-family: Arial, sans-serif;
+      }
+
+      .footer {
+        display: flex;
+
+        /* justify-content: space-between; */
+      }
+
+      .left {
+        width: 50%;
+        background-color: rgb(22, 22, 164);
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .left > img {
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-top: 30px; */
+        width: 60%;
+      }
+
+      .right {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(93, 93, 253);
+        width: 50%;
+      }
+
+      .right > div {
+        width: 25%;
+        padding-top: 70px;
+        padding-left: 20px;
+        box-sizing: border-box;
+      }
+
+      p,
+      h4 {
+        color: rgb(239, 234, 224);
+        padding: 10px;
+      }
+
+      .foot {
+        display: flex;
+        justify-content: space-between; /* Added to separate the sections */
+        align-items: center; /* Centered vertically */
+        background-color: rgb(45, 43, 43);
+        height: 50px;
+      }
+
+      .left1 {
+        display: flex;
+        align-items: center;
+      }
+
+      .indian_flag {
+        width: 40px;
+        border-radius: 50%;
+        margin-left: 8px;
+      }
+      h5 {
+        color: azure;
+      }
+      .icon {
+        margin: 20px;
+      }
+      a {
+        color: azure;
+        padding: 8px;
+      }
+      span {
+        color: aliceblue;
+      }
+      h3 {
+        text-align: left;
+        color: brown;
+      }
+      .sp {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+      }
+      .sp > img {
+        width: 50%;
+        height: 40%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+        justify-content: space-around;
+      }
+      .cart {
+        background-color: red;
+        margin-top: auto;
+        padding: 20px;
+        text-align: center;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      @media screen and (max-width: 1023px) {
+        .main {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .card img {
+          height: 120px;
+        }
+
+        .footer .right {
+          width: calc(100% - 320px);
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .main {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+
+        .card img {
+          height: 100px;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px;
+        }
+
+        .footer .right {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .footer .right .section {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .foot {
+          flex-wrap: wrap;
+        }
+
+        .foot .left1 {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .foot .right1 {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h3>Souvenir</h3>
+
+      <ul>
+        <a href="#">LIPS</a>
+        <a href="#">EYES</a>
+        <a href="#">FACE</a>
+        <a href="#">NAILS</a>
+        <a href="#">SKINCARE</a>
+      </ul>
+    </nav>
+
+    <div class="category">
+      <h1>
+        Shop by Category<span class="sp"
+          ><img
+            src="https://i.etsystatic.com/11326925/c/1512/1201/0/310/il/582a10/3704219961/il_680x540.3704219961_ckr2.jpg"
+            alt=""
+          />
+        </span>
+      </h1>
+    </div>
+    <div class="main">
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5204269/c/888/706/201/265/il/462ec1/1000393416/il_680x540.1000393416_qf5c.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5863761/c/1923/1527/16/743/il/8cbd6c/1390117214/il_680x540.1390117214_f338.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/11544420/c/2777/2207/118/35/il/c420f3/5339022152/il_680x540.5339022152_oz9w.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5204269/c/888/706/201/265/il/462ec1/1000393416/il_680x540.1000393416_qf5c.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5681268/r/il/1a172e/1340668142/il_680x540.1340668142_gl4u.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5863761/c/1923/1527/16/743/il/8cbd6c/1390117214/il_680x540.1390117214_f338.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/5681268/r/il/1a172e/1340668142/il_680x540.1340668142_gl4u.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.etsystatic.com/11544420/c/2777/2207/118/35/il/c420f3/5339022152/il_680x540.5339022152_oz9w.jpg"
+          alt=""
+        />
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="left">
+        <img
+          class="img"
+          src="https://media.licdn.com/dms/image/D4D12AQFadmhNxKixpA/article-cover_image-shrink_600_2000/0/1700939509421?e=2147483647&v=beta&t=7VIrYPIN7bljVpnNtYE2Kgmhj50TUOVK5dDJgqJDIKs"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <div class="shop">
+          <h4>Shop</h4>
+          <p>Gift cards</p>
+          <p>Etsy Registry</p>
+          <p>Sitemap</p>
+          <p>Etsy blog</p>
+          <p>Etsy United Kingdom</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div class="sell">
+          <h4>Sell</h4>
+          <p>Sell on Etsy</p>
+          <p>Teams</p>
+          <p>Forums</p>
+          <p>Affiliates & Creators</p>
+        </div>
+        <div class="about">
+          <h4>About</h4>
+          <p>Etsy, Inc</p>
+          <p>Policies</p>
+          <p>Investors</p>
+          <p>Careers</p>
+          <p>Press</p>
+          <p>Impact</p>
+          <p>Legal imprint</p>
+        </div>
+        <div class="shop">
+          <h4>Shop</h4>
+          <p>Gift cards</p>
+          <p>Etsy Registry</p>
+          <p>Sitemap</p>
+          <p>Etsy blog</p>
+          <p>Etsy United Kingdom</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div class="left1">
+        <div class="flag">
+          <img
+            class="indian_flag"
+            src="https://www.mapsofindia.com/maps/india/india-flag.jpg"
+            alt=""
+          />
+        </div>
+        <div class="icon">
+          <h5>
+            India&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;&nbsp;(INR)
+          </h5>
+        </div>
+      </div>
+      <div class="right1">
+        <span
+          >&copy; 2024 Etsy. Inc. <a href="#">Term of Use</a
+          ><a href="#">Privacy</a><a href="#">Interest based ads</a
+          ><a href="#">Local Shop</a><a href="#">Regions</a></span
+        >
+      </div>
+    </div>
+  </body>
+</html>
